@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asistente de Iluminación</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calculador de Iluminación</h1>
+    <p>Completá los datos del ambiente y te sugerimos una solución de iluminación.</p>
+
+    <form id="form">
+      <label for="m2">Superficie (m²):</label>
+      <input type="number" id="m2" min="1" step="0.1" required>
+
+      <label for="altura">Altura del techo (m):</label>
+      <input type="number" id="altura" min="2" step="0.1" required>
+
+      <label for="ambiente">Ambiente:</label>
+      <select id="ambiente" required>
+        <option value="living">Living / Comedor</option>
+        <option value="cocina">Cocina</option>
+        <option value="baño">Baño</option>
+        <option value="dormitorio">Dormitorio</option>
+      </select>
+
+      <label for="color">Color actual de paredes / entorno:</label>
+      <select id="color" required>
+        <option value="claro">Claro</option>
+        <option value="medio">Medio</option>
+        <option value="oscuro">Oscuro</option>
+      </select>
+
+      <label for="uso">¿Qué buscás priorizar?</label>
+
+      <select id="uso" required>
+        <option value="confort">Confort visual</option>
+        <option value="equilibrado">Equilibrio entre confort y funcionalidad</option>
+        <option value="intenso">Mayor intensidad de iluminación</option>
+      </select>
+    <label for="estilo">Estilo de decoración preferido:</label>
+<select id="estilo" required>
+  <option value="sin-preferencia">Sin preferencia</option>
+  <option value="minimalista">Minimalista</option>
+  <option value="nordico">Nórdico / Escandinavo</option>
+  <option value="industrial">Industrial</option>
+  <option value="moderno">Moderno</option>
+  <option value="vintage">Vintage / Retro</option>
+</select>
+      <button type="submit">Calcular recomendación</button>
+    </form>
+
+    <div id="resultado" class="resultado"></div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
